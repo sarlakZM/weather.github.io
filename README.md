@@ -32,7 +32,7 @@
 | `Performance Optimization`              | Optimize the application's performance by lazy-loading modules, using code splitting, and optimizing network requests. Implement memoization techniques to cache expensive calculations and computations  |  |
 | `Internationalization and Localization`  | Implement internationalization (i18n) and localization (l10n) support to provide multi-language support in the application.    | [ngx-translate ref](https://github.com/ngx-translate/core)     |
 | `Responsive Design`      | Design and layout the application with a responsive and mobile-friendly interface. Ensure the application is visually appealing and usable on different screen sizes. |  |
-| `Continuous Integration and Deployment`  | Deploy the application to a hosting platform on Firebase|  |
+| `Continuous Integration and Deployment`  | Deploy the application to a hosting platform on Firebase | Not Completed |
 
 
 ## Development server
