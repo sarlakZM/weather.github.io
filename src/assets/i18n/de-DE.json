@@ -1,0 +1,13 @@
+{
+  "SEARCH": "Suche",
+  "DATA": {
+    "NAME": "{{value}}",
+    "COUNTRY": "{{value}}"
+  },
+  "TEMPERATYRE": "Temperatur",
+  "FEELS_LIKE": "Fühlt sich an wie",
+  "HUMIDITY": "Luftfeuchtigkeit",
+  "WIND_SPEED": "Windgeschwindigkeit",
+  "PRESSURE": "Druck",
+  "VISIBILITY": "Sichtbarkeit"
+}

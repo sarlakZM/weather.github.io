@@ -1,0 +1,46 @@
+<mat-card class="example-card" *ngIf="weather_result$ | async as data">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ data.name }}, {{ data.sys.country }} </mat-card-title>
+      <mat-card-subtitle
+        ><strong
+          >{{ 'TEMPERATYRE' | translate }}: {{ data.main.temp }}
+          <span class="degree">&deg;C</span></strong
+        ></mat-card-subtitle
+      >
+
+      <img
+        mat-card-sm-image
+        alt="Photo of weather status"
+        [src]="
+          'https://openweathermap.org/img/wn/' +
+          data.weather[0].icon +
+          '@2x.png'
+        " />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="content">
+      <p>
+        {{ 'FEELS_LIKE' | translate }} {{ data.main.feels_like }}&deg;C.
+        {{ data.weather[0].main }},{{ data.weather[0].description }}
+      </p>
+      <p>
+        <span class="title">{{ 'HUMIDITY' | translate }}:</span
+        ><span class="value">{{ data.main.humidity }}%</span>
+      </p>
+      <p>
+        <span class="title">{{ 'WIND_SPEED' | translate }}:</span
+        ><span class="value">{{ data.wind.speed }}</span>
+      </p>
+      <p>
+        <span class="title">{{ 'PRESSURE' | translate }}:</span
+        ><span class="value">{{ data.main.pressure }}</span>
+      </p>
+      <p>
+        <span class="title">{{ 'VISIBILITY' | translate }}:</span
+        ><span class="value">{{ data.visibility }}km</span>
+      </p>
+    </div>
+  </mat-card-content>
+</mat-card>

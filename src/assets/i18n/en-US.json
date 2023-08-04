@@ -1,0 +1,13 @@
+{
+  "SEARCH": "Search",
+  "DATA": {
+    "NAME": "{{value}}",
+    "COUNTRY": "{{value}}"
+  },
+  "TEMPERATYRE": "Temperature",
+  "FEELS_LIKE": "Feels Like: ",
+  "HUMIDITY": "Humidity",
+  "WIND_SPEED": "Wind Speed",
+  "PRESSURE": "Pressure",
+  "VISIBILITY": "Visibility"
+}

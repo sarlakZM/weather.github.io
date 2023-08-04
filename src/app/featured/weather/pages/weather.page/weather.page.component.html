@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input
+        matInput
+        type="search"
+        placeholder="search here and enter"
+        class="search-input"
+        (keyup.enter)="selectedCity($event)" />
+    </mat-form-field>
+    <ng-container *ngIf="!(loading$ | async)">
+      <app-card-weather></app-card-weather>
+    </ng-container>
+    <ng-container *ngIf="loading$ | async">
+      <mat-spinner></mat-spinner>
+      <div class="loading-text-spinner">loading ...</div>
+    </ng-container>
+  </div>
+</div>

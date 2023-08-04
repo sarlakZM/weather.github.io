@@ -1,0 +1,112 @@
+{
+  "configVersion": 1,
+  "timestamp": 1691151553582,
+  "index": "/weather.github.io/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/weather.github.io/38.d5345fec782e5f51.js",
+        "/weather.github.io/favicon.ico",
+        "/weather.github.io/index.html",
+        "/weather.github.io/main.99b575a17d451286.js",
+        "/weather.github.io/manifest.webmanifest",
+        "/weather.github.io/polyfills.100a54da7649a1d5.js",
+        "/weather.github.io/runtime.47a967b434d94e8b.js",
+        "/weather.github.io/styles.a3dabed496a5ea6f.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/weather.github.io/assets/i18n/de-DE.json",
+        "/weather.github.io/assets/i18n/en-US.json",
+        "/weather.github.io/assets/i18n/fr-FR.json",
+        "/weather.github.io/assets/icons/icon-128x128.png",
+        "/weather.github.io/assets/icons/icon-144x144.png",
+        "/weather.github.io/assets/icons/icon-152x152.png",
+        "/weather.github.io/assets/icons/icon-192x192.png",
+        "/weather.github.io/assets/icons/icon-384x384.png",
+        "/weather.github.io/assets/icons/icon-512x512.png",
+        "/weather.github.io/assets/icons/icon-72x72.png",
+        "/weather.github.io/assets/icons/icon-96x96.png",
+        "/weather.github.io/assets/images/bg-1.jpg",
+        "/weather.github.io/assets/images/sentry-notify.png",
+        "/weather.github.io/assets/images/weather-site-view.png",
+        "/weather.github.io/bg-1.59c6786d4c0ded6e.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-fresh",
+      "patterns": [
+        "https:\\/\\/api\\.openweathermap\\.org\\/data\\/2\\.5\\/"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/weather.github.io/38.d5345fec782e5f51.js": "09f771b342057f33b719550d6e6504d8d4b388c4",
+    "/weather.github.io/assets/i18n/de-DE.json": "dc0ab446971275426af03593d7a3969bda8314a1",
+    "/weather.github.io/assets/i18n/en-US.json": "b3c1e308111d932b29199a341879342d442c3d04",
+    "/weather.github.io/assets/i18n/fr-FR.json": "a34bf35261ffc24c9122ae67d64f9353121644c6",
+    "/weather.github.io/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/weather.github.io/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/weather.github.io/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/weather.github.io/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/weather.github.io/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/weather.github.io/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/weather.github.io/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/weather.github.io/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/weather.github.io/assets/images/bg-1.jpg": "d13873b5fd6403c94379e821818f0b592b2a9a4b",
+    "/weather.github.io/assets/images/sentry-notify.png": "c159c536594e2d5bd79344885a8a87d67c9a63a0",
+    "/weather.github.io/assets/images/weather-site-view.png": "c23f4bf2193dba2fa9499648a5beeeddbe42f7f1",
+    "/weather.github.io/bg-1.59c6786d4c0ded6e.jpg": "d13873b5fd6403c94379e821818f0b592b2a9a4b",
+    "/weather.github.io/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/weather.github.io/index.html": "75e840e537601a6b69e53abb6ab1b470a84712b6",
+    "/weather.github.io/main.99b575a17d451286.js": "60a669981f728eddda42dea666398679d9bae1b0",
+    "/weather.github.io/manifest.webmanifest": "5d597077d36474e1ee12842ca4ad1a0ab33a566a",
+    "/weather.github.io/polyfills.100a54da7649a1d5.js": "1f0bf606036d125d81b24593442e29b549d6d45a",
+    "/weather.github.io/runtime.47a967b434d94e8b.js": "0f27b488c4ac1b2a7a5a7887ae208bfe13f4d2dd",
+    "/weather.github.io/styles.a3dabed496a5ea6f.css": "79efa9d50a17adcd77f3666489e558030f807688"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
