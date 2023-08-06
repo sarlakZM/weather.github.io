@@ -65,7 +65,7 @@ Analyze statically the code to quickly find problems.
 Format the code with [Prettier](https://prettier.io/)
 
 ```bash
-  npm run format
+  npm run prettier
 ```
 
 configure Production Build with http-server and run /dist/ on a server throght cli ( Testing offline mode)
