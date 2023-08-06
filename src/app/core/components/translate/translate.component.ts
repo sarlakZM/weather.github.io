@@ -6,7 +6,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { DEFAULT_LANGUAGE_CONST, LANGUAGES_CONST } from '@weather/core';
 
-
 @Component({
   selector: 'app-translate',
   templateUrl: './translate.component.html',

@@ -1,6 +1,5 @@
-import { EntityState } from "@weather/core";
-import { WeatherModel } from "@weather/featured";
-
+import { EntityState } from '@weather/core';
+import { WeatherModel } from '@weather/featured';
 
 export interface WeatherState extends EntityState<WeatherModel> {}
 

@@ -5,7 +5,6 @@ import { map, catchError, switchMap, shareReplay, tap } from 'rxjs/operators';
 
 import { WeatherActions, WeatherService } from '@weather/featured';
 
-
 @Injectable()
 export class WeatherEffects {
   constructor(

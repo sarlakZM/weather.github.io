@@ -15,9 +15,12 @@ import {
   timer,
 } from 'rxjs';
 
-import { WeatherActions, WeatherState, selectWeatherLoading } from '@weather/featured';
+import {
+  WeatherActions,
+  WeatherState,
+  selectWeatherLoading,
+} from '@weather/featured';
 import { CardWeatherComponent } from '../../components/card-weather/card-weather.component';
-
 
 @Component({
   standalone: true,
@@ -45,10 +48,10 @@ export class WeatherPageComponent implements OnInit {
     //     }
     //   });
     // }
-    this.loading$ = this.store
-      .pipe(
-        select(selectWeatherLoading),
-        shareReplay())
+    this.loading$ = this.store.pipe(
+      select(selectWeatherLoading),
+      shareReplay()
+    );
   }
 
   selectedCity(event: any) {

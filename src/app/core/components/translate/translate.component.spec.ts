@@ -11,7 +11,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TranslateComponent } from './translate.component';
-import { DEFAULT_LANGUAGE_CONST, httpTranslateLoaderFactory } from '@weather/core';
+import {
+  DEFAULT_LANGUAGE_CONST,
+  httpTranslateLoaderFactory,
+} from '@weather/core';
 
 describe('TranslateComponent', () => {
   let component: TranslateComponent;

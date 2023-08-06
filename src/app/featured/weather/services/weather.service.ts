@@ -3,8 +3,11 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { BaseService } from '@weather/shared';
-import { WEATHER_CONFIG, WeatherConfigModel, WeatherModel } from '@weather/featured';
-
+import {
+  WEATHER_CONFIG,
+  WeatherConfigModel,
+  WeatherModel,
+} from '@weather/featured';
 
 @Injectable()
 export class WeatherService extends BaseService<WeatherModel> {

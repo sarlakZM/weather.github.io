@@ -1,4 +1,4 @@
-import { SystemMessages } from "../utils";
+import { SystemMessages } from '../utils';
 
 export class HandleErrorService {
   handleError(err: any) {

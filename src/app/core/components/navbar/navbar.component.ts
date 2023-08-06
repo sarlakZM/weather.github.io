@@ -6,8 +6,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { APP_TITLE_CONST } from '@weather/core';
 import { TranslateComponent } from '../translate/translate.component';
 
-
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

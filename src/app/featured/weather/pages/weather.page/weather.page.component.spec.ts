@@ -7,8 +7,24 @@ import { provideEffects } from '@ngrx/effects';
 import { ToastrModule } from 'ngx-toastr';
 
 import { WeatherPageComponent } from './weather.page.component';
-import { MockErrorLogger, MockWeatherResult, MockWeatherResultState, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherReducer, WeatherService, WeatherState, effectList, selectWeather, selectWeatherLoading } from '@weather/featured';
-import { ErrorLogger, HandleErrorService, NotificationService } from '@weather/core';
+import {
+  MockErrorLogger,
+  MockWeatherResult,
+  MockWeatherResultState,
+  WEATHER_CONFIG,
+  WEATHER_DI_DB_CONFIG,
+  WeatherReducer,
+  WeatherService,
+  WeatherState,
+  effectList,
+  selectWeather,
+  selectWeatherLoading,
+} from '@weather/featured';
+import {
+  ErrorLogger,
+  HandleErrorService,
+  NotificationService,
+} from '@weather/core';
 import { SharedModule } from '@weather/shared';
 
 describe('WeatherPageComponent', () => {

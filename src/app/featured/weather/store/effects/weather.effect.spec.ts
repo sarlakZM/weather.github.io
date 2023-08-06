@@ -9,10 +9,15 @@ import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 
 import { WeatherEffects } from './weather.effect';
-import { MockWeatherResult, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherActions, WeatherReducer, WeatherService } from '@weather/featured';
+import {
+  MockWeatherResult,
+  WEATHER_CONFIG,
+  WEATHER_DI_DB_CONFIG,
+  WeatherActions,
+  WeatherReducer,
+  WeatherService,
+} from '@weather/featured';
 import { SharedModule } from '@weather/shared';
-
-
 
 describe('Store: Weather Effect', () => {
   let effects: WeatherEffects;

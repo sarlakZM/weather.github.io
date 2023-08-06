@@ -1,4 +1,4 @@
-import { WeatherActions } from "@weather/featured";
+import { WeatherActions } from '@weather/featured';
 
 describe('Store: Weather action', () => {
   it('should call GetWeatherAction Action', () => {

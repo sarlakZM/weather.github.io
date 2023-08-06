@@ -1,4 +1,9 @@
-import { MockWeatherResult, initialWeatherState, selectWeather, selectWeatherLoading } from "@weather/featured";
+import {
+  MockWeatherResult,
+  initialWeatherState,
+  selectWeather,
+  selectWeatherLoading,
+} from '@weather/featured';
 
 describe('Store: Weather Selector', () => {
   it('should check loading', () => {

@@ -2,8 +2,12 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 
-import { MockWeatherResult, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherService } from '@weather/featured';
-
+import {
+  MockWeatherResult,
+  WEATHER_CONFIG,
+  WEATHER_DI_DB_CONFIG,
+  WeatherService,
+} from '@weather/featured';
 
 describe('WeatherService', () => {
   let service: WeatherService;

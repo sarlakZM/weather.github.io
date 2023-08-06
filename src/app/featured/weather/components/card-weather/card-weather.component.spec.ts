@@ -4,11 +4,26 @@ import { provideEffects } from '@ngrx/effects';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-
 import { CardWeatherComponent } from './card-weather.component';
-import { MockErrorLogger, MockWeatherResult, MockWeatherResultState, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherReducer, WeatherService, WeatherState, effectList, selectWeather } from '@weather/featured';
+import {
+  MockErrorLogger,
+  MockWeatherResult,
+  MockWeatherResultState,
+  WEATHER_CONFIG,
+  WEATHER_DI_DB_CONFIG,
+  WeatherReducer,
+  WeatherService,
+  WeatherState,
+  effectList,
+  selectWeather,
+} from '@weather/featured';
 import { SharedModule } from '@weather/shared';
-import { CoreModule, ErrorLogger, HandleErrorService, NotificationService } from '@weather/core';
+import {
+  CoreModule,
+  ErrorLogger,
+  HandleErrorService,
+  NotificationService,
+} from '@weather/core';
 
 describe('CardWeatherComponent', () => {
   let component: CardWeatherComponent;

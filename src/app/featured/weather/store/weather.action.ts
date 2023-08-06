@@ -16,9 +16,8 @@ const GetWeatherActionFail = createAction(
   props<{ error: any }>()
 );
 
-
 export const WeatherActions = {
   GetWeatherAction,
   GetWeatherActionFail,
-  GetWeatherActionSuccess
-}
+  GetWeatherActionSuccess,
+};

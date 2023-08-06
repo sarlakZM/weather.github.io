@@ -11,7 +11,12 @@ import {
   TranslateService,
 } from '@ngx-translate/core';
 
-import { DEFAULT_LANGUAGE_CONST, NavbarComponent, TranslateComponent, httpTranslateLoaderFactory } from '@weather/core';
+import {
+  DEFAULT_LANGUAGE_CONST,
+  NavbarComponent,
+  TranslateComponent,
+  httpTranslateLoaderFactory,
+} from '@weather/core';
 
 describe('navbar', () => {
   let component: NavbarComponent;

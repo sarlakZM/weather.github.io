@@ -3,10 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
-import { ErrorLogger, FeaturesEnum, HandleErrorService, NotificationService } from './core';
-import { WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherReducer, WeatherService, effectList } from './featured';
-
-
+import {
+  ErrorLogger,
+  FeaturesEnum,
+  HandleErrorService,
+  NotificationService,
+} from './core';
+import {
+  WEATHER_CONFIG,
+  WEATHER_DI_DB_CONFIG,
+  WeatherReducer,
+  WeatherService,
+  effectList,
+} from './featured';
 
 const routes: Routes = [
   {

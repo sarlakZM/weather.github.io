@@ -13,7 +13,6 @@ import { ToastComponent } from '@weather/shared';
 import { CacheInterceptor } from './interceptors';
 import { DEFAULT_LANGUAGE_CONST } from './constants';
 
-
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');

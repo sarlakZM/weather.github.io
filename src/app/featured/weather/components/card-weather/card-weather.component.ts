@@ -5,7 +5,6 @@ import { Store, select } from '@ngrx/store';
 import { SharedModule } from '@weather/shared';
 import { WeatherModel, WeatherState, selectWeather } from '@weather/featured';
 
-
 @Component({
   selector: 'app-card-weather',
   standalone: true,
@@ -19,8 +18,9 @@ export class CardWeatherComponent {
   constructor(private store: Store<WeatherState>) {}
 
   ngOnInit(): void {
-    this.weather_result$ = this.store
-      .pipe(select(selectWeather),
-                    shareReplay(1))
+    this.weather_result$ = this.store.pipe(
+      select(selectWeather),
+      shareReplay(1)
+    );
   }
 }

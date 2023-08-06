@@ -2,9 +2,12 @@ import { ErrorHandler, Inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { tap } from 'rxjs';
 
-import { ErrorLogger, HandleErrorService, NotificationService } from '@weather/core';
+import {
+  ErrorLogger,
+  HandleErrorService,
+  NotificationService,
+} from '@weather/core';
 import { WeatherActions } from '@weather/featured';
-
 
 @Injectable()
 export class ErrorEffects {

@@ -1,4 +1,10 @@
-import { MockWeatherResult, MockWeatherResultState, WeatherActions, WeatherReducer, initialWeatherState } from "@weather/featured";
+import {
+  MockWeatherResult,
+  MockWeatherResultState,
+  WeatherActions,
+  WeatherReducer,
+  initialWeatherState,
+} from '@weather/featured';
 
 describe('Store: Weather Reducer', () => {
   initialWeatherState.entities = MockWeatherResult;
