@@ -10,7 +10,7 @@ describe('BaseService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [BaseService, { provide: 'badeUrl', useValue: '' }],
+      providers: [BaseService, { provide: 'baseUrl', useValue: '' }],
     });
 
     service = TestBed.inject<BaseService<any>>(BaseService);

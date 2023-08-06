@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Weather } from '../models';
-import { WeatherState } from '../store';
+import { WeatherModel, WeatherState } from '@weather/featured';
 
-export const MockWeatherResult: Weather = {
+export const MockWeatherResult: WeatherModel = {
   coord: {
     lon: 51.6776,
     lat: 32.6572,

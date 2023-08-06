@@ -1,14 +1,14 @@
 import { isPlatformBrowser } from '@angular/common';
 import { ErrorHandler, Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import * as Sentry from '@sentry/angular-ivy';
-import { SENTRY_DNS } from '../config/config';
+import { SENTRY_DNS_CONFIG } from '../config/config';
 
 @Injectable()
 export class ErrorLogger implements ErrorHandler {
   constructor(@Inject(PLATFORM_ID) private readonly platformId: any) {
     if (isPlatformBrowser(this.platformId)) {
       Sentry.init({
-        dsn: SENTRY_DNS,
+        dsn: SENTRY_DNS_CONFIG,
         // release: sentry.environment prod,
         integrations: [
           new Sentry.BrowserTracing({

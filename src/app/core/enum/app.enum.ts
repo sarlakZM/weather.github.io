@@ -1,3 +1,3 @@
-export enum Features {
+export enum FeaturesEnum {
   Weather = 'weather',
 }

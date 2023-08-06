@@ -1,9 +1,10 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { WeatherState } from './weather.state';
-import { Features } from 'src/app/core/enum';
+import { FeaturesEnum } from '@weather/core';
+import { WeatherState } from '@weather/featured';
+
 
 export const selectFeature = createFeatureSelector<WeatherState>(
-  Features.Weather
+  FeaturesEnum.Weather
 );
 
 export const selectWeather = createSelector(

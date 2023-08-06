@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export abstract class BaseReadonlyService<T> {
-  protected badeUrl!: string;
+  protected baseUrl!: string;
   protected path!: string;
   protected options = {
     headers: new HttpHeaders(),
@@ -15,14 +15,14 @@ export abstract class BaseReadonlyService<T> {
 
   getAll(): Observable<T[]> {
     return this.httpClient
-      .get<T[]>(this.badeUrl)
+      .get<T[]>(this.baseUrl)
       .pipe(map(response => response));
   }
 
   get(params: HttpParams): Observable<T> {
     this.options.params = params;
     return this.httpClient
-      .get<T>(`${this.badeUrl}${this.path}`, this.options)
+      .get<T>(`${this.baseUrl}${this.path}`, this.options)
       .pipe(map(response => response));
   }
 }
@@ -31,27 +31,27 @@ export abstract class BaseReadonlyService<T> {
 export abstract class BaseService<T> extends BaseReadonlyService<T> {
   protected constructor(
     httpClient: HttpClient,
-    @Inject('badeUrl') protected _badeUrl: string
+    @Inject('baseUrl') protected _baseUrl: string
   ) {
     super(httpClient);
-    this.badeUrl = `${_badeUrl}`;
+    this.baseUrl = `${_baseUrl}`;
   }
 
   create(t: T): Observable<T> {
     return this.httpClient
-      .post<T>(this.badeUrl, t)
+      .post<T>(this.baseUrl, t)
       .pipe(map(response => response));
   }
 
   update(id: number, t: T): Observable<Object> {
     return this.httpClient
-      .put(`${this.badeUrl}/${id}`, t)
+      .put(`${this.baseUrl}/${id}`, t)
       .pipe(map(response => response));
   }
 
   delete(id: number[]): Observable<Object> {
     return this.httpClient
-      .delete(`${this.badeUrl}/${id}`)
+      .delete(`${this.baseUrl}/${id}`)
       .pipe(map(response => response));
   }
 }

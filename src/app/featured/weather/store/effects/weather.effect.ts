@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { map, catchError, switchMap, shareReplay, tap } from 'rxjs/operators';
-import { WeatherService } from '../../services/weather.service';
-import * as WeatherActions from './../weather.action';
+
+import { WeatherActions, WeatherService } from '@weather/featured';
+
 
 @Injectable()
 export class WeatherEffects {

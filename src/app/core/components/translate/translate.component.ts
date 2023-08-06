@@ -4,7 +4,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { TranslateService } from '@ngx-translate/core';
 
-import { DEFAULT_LANGUAGE, LANGUAGES } from '../../constants/app.constant';
+import { DEFAULT_LANGUAGE_CONST, LANGUAGES_CONST } from '@weather/core';
+
 
 @Component({
   selector: 'app-translate',
@@ -14,8 +15,8 @@ import { DEFAULT_LANGUAGE, LANGUAGES } from '../../constants/app.constant';
   imports: [NgFor, MatFormFieldModule, MatSelectModule],
 })
 export class TranslateComponent {
-  languages = LANGUAGES;
-  selectedLanguage = DEFAULT_LANGUAGE;
+  languages = LANGUAGES_CONST;
+  selectedLanguage = DEFAULT_LANGUAGE_CONST;
 
   constructor(private translate: TranslateService) {
     // Register translation languages

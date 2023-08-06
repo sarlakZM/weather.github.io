@@ -3,13 +3,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { APP_TITLE_CONST } from '@weather/core';
 import { TranslateComponent } from '../translate/translate.component';
-import { APP_TITLE } from '../../constants/app.constant';
+
+
 
 @Component({
-  selector: 'app-nabvar',
-  templateUrl: './nabvar.component.html',
-  styleUrls: ['./nabvar.component.scss'],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
   standalone: true,
   imports: [
     MatToolbarModule,
@@ -18,6 +20,6 @@ import { APP_TITLE } from '../../constants/app.constant';
     TranslateComponent,
   ],
 })
-export class NabvarComponent {
-  app_title = APP_TITLE;
+export class NavbarComponent {
+  app_title = APP_TITLE_CONST;
 }

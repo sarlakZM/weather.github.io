@@ -6,25 +6,10 @@ import { Store, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { ToastrModule } from 'ngx-toastr';
 
-import { SharedModule } from 'src/app/shared/shared.module';
-import { NotificationService } from 'src/app/core/services/notification.service';
-import { HandleErrorService } from 'src/app/core/services/handle-error.service';
-import { ErrorLogger } from 'src/app/core/services';
-import {
-  MockErrorLogger,
-  MockWeatherResult,
-  MockWeatherResultState,
-} from '../../mock/data.mock';
-import { WeatherService } from '../../services';
-import { WEATHER_CONFIG, WEATHER_DI_CONFIG } from '../../config';
-import {
-  WeatherReducer,
-  WeatherState,
-  effectList,
-  selectWeather,
-  selectWeatherLoading,
-} from '../../store';
 import { WeatherPageComponent } from './weather.page.component';
+import { MockErrorLogger, MockWeatherResult, MockWeatherResultState, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherReducer, WeatherService, WeatherState, effectList, selectWeather, selectWeatherLoading } from '@weather/featured';
+import { ErrorLogger, HandleErrorService, NotificationService } from '@weather/core';
+import { SharedModule } from '@weather/shared';
 
 describe('WeatherPageComponent', () => {
   let component: WeatherPageComponent;
@@ -59,7 +44,7 @@ describe('WeatherPageComponent', () => {
         WeatherService,
         {
           provide: WEATHER_CONFIG,
-          useValue: WEATHER_DI_CONFIG,
+          useValue: WEATHER_DI_DB_CONFIG,
         },
         {
           provide: ErrorLogger,

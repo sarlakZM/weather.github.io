@@ -8,10 +8,10 @@ import {
   TranslateService,
 } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { httpTranslateLoaderFactory } from '../../core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DEFAULT_LANGUAGE } from '../../constants';
+
 import { TranslateComponent } from './translate.component';
+import { DEFAULT_LANGUAGE_CONST, httpTranslateLoaderFactory } from '@weather/core';
 
 describe('TranslateComponent', () => {
   let component: TranslateComponent;
@@ -28,7 +28,7 @@ describe('TranslateComponent', () => {
             useFactory: httpTranslateLoaderFactory,
             deps: [HttpClient],
           },
-          defaultLanguage: DEFAULT_LANGUAGE,
+          defaultLanguage: DEFAULT_LANGUAGE_CONST,
         }),
         BrowserAnimationsModule,
         HttpClientModule,
@@ -52,7 +52,7 @@ describe('TranslateComponent', () => {
 
   it('should call translate function', () => {
     spyOn(translateService, 'use');
-    component.translateLanguageTo(DEFAULT_LANGUAGE);
-    expect(translateService.use).toHaveBeenCalledWith(DEFAULT_LANGUAGE);
+    component.translateLanguageTo(DEFAULT_LANGUAGE_CONST);
+    expect(translateService.use).toHaveBeenCalledWith(DEFAULT_LANGUAGE_CONST);
   });
 });

@@ -8,10 +8,11 @@ import { Router } from '@angular/router';
 import { ErrorLogger } from './services';
 import { ToastrModule } from 'ngx-toastr';
 
-import { CacheInterceptor } from './interceptors/cache-Interceptor';
-import { NabvarComponent } from './components/nabvar/nabvar.component';
-import { DEFAULT_LANGUAGE } from './constants';
-import { ToastComponent } from '../shared/components/toast/toast.component';
+import { NavbarComponent } from './components';
+import { ToastComponent } from '@weather/shared';
+import { CacheInterceptor } from './interceptors';
+import { DEFAULT_LANGUAGE_CONST } from './constants';
+
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -28,9 +29,9 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
         useFactory: httpTranslateLoaderFactory,
         deps: [HttpClient],
       },
-      defaultLanguage: DEFAULT_LANGUAGE,
+      defaultLanguage: DEFAULT_LANGUAGE_CONST,
     }),
-    NabvarComponent,
+    NavbarComponent,
     ToastrModule.forRoot({
       timeOut: 6000,
       tapToDismiss: false,
@@ -63,6 +64,6 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
       multi: true,
     },
   ],
-  exports: [NabvarComponent],
+  exports: [NavbarComponent],
 })
 export class CoreModule {}

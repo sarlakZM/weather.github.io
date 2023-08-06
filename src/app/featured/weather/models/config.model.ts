@@ -1,5 +1,5 @@
-import { Config } from 'src/app/core/models';
+import { ConfigModel } from "@weather/core";
 
-export type WeatherConfig = {
-  [Key in keyof Config as `weatherDb${Capitalize<Key>}`]: Config[Key];
+export type WeatherConfigModel = {
+  [Key in keyof ConfigModel as `weatherDb${Capitalize<Key>}`]: ConfigModel[Key];
 };

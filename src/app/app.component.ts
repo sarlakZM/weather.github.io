@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NabvarComponent } from './core/components/nabvar/nabvar.component';
 
 @Component({
   selector: 'app-root',
   template: `
-    <app-nabvar></app-nabvar>
+    <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   `,
 })

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { Store, select } from '@ngrx/store';
+import { SharedModule } from '@weather/shared';
 import {
   Observable,
   catchError,
@@ -14,10 +15,9 @@ import {
   timer,
 } from 'rxjs';
 
-import { SharedModule } from 'src/app/shared/shared.module';
-import { WeatherState, selectWeatherLoading } from '../../store';
-import * as WeatherActions from '../../store/weather.action';
+import { WeatherActions, WeatherState, selectWeatherLoading } from '@weather/featured';
 import { CardWeatherComponent } from '../../components/card-weather/card-weather.component';
+
 
 @Component({
   standalone: true,
@@ -46,8 +46,9 @@ export class WeatherPageComponent implements OnInit {
     //   });
     // }
     this.loading$ = this.store
-      .pipe(select(selectWeatherLoading))
-      .pipe(shareReplay());
+      .pipe(
+        select(selectWeatherLoading),
+        shareReplay())
   }
 
   selectedCity(event: any) {

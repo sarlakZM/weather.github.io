@@ -1,6 +1,4 @@
-import { MockWeatherResult } from '../mock/data.mock';
-import { selectWeather, selectWeatherLoading } from './weather.selector';
-import { initialWeatherState } from './weather.state';
+import { MockWeatherResult, initialWeatherState, selectWeather, selectWeatherLoading } from "@weather/featured";
 
 describe('Store: Weather Selector', () => {
   it('should check loading', () => {

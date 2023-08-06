@@ -3,6 +3,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@weather/core": ["./src/app/core"],
+      "@weather/featured": ["./src/app/featured"],
+      "@weather/shared": ["./src/app/shared"],
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

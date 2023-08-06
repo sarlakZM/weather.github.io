@@ -1,7 +1,8 @@
-import { EntityState } from 'src/app/core/store/state';
-import { Weather } from '../models';
+import { EntityState } from "@weather/core";
+import { WeatherModel } from "@weather/featured";
 
-export interface WeatherState extends EntityState<Weather> {}
+
+export interface WeatherState extends EntityState<WeatherModel> {}
 
 export const initialWeatherState: WeatherState = {
   entities: null,

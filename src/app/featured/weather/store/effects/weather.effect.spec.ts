@@ -8,13 +8,11 @@ import { provideMockActions } from '@ngrx/effects/testing';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 
-import { SharedModule } from 'src/app/shared/shared.module';
-import { MockWeatherResult } from '../../mock/data.mock';
 import { WeatherEffects } from './weather.effect';
-import * as WeatherActions from '../weather.action';
-import { WeatherService } from '../../services';
-import { WeatherReducer } from '../weather.reducer';
-import { WEATHER_CONFIG, WEATHER_DI_CONFIG } from '../../config';
+import { MockWeatherResult, WEATHER_CONFIG, WEATHER_DI_DB_CONFIG, WeatherActions, WeatherReducer, WeatherService } from '@weather/featured';
+import { SharedModule } from '@weather/shared';
+
+
 
 describe('Store: Weather Effect', () => {
   let effects: WeatherEffects;
@@ -36,7 +34,7 @@ describe('Store: Weather Effect', () => {
         provideStore(WeatherReducer),
         {
           provide: WEATHER_CONFIG,
-          useValue: WEATHER_DI_CONFIG,
+          useValue: WEATHER_DI_DB_CONFIG,
         },
         provideMockActions(() => actions1),
       ],

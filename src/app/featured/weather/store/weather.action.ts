@@ -1,17 +1,24 @@
 import { createAction, props } from '@ngrx/store';
-import { Weather } from '../models';
+import { WeatherModel } from '@weather/featured';
 
-export const GetWeatherAction = createAction(
+const GetWeatherAction = createAction(
   '[Weather API] Get Weather',
   props<{ city: string }>()
 );
 
-export const GetWeatherActionSuccess = createAction(
+const GetWeatherActionSuccess = createAction(
   '[Weather API] Get Weather Success',
-  props<{ entities: Weather }>()
+  props<{ entities: WeatherModel }>()
 );
 
-export const GetWeatherActionFail = createAction(
+const GetWeatherActionFail = createAction(
   '[Weather API] Get Weather Fail',
   props<{ error: any }>()
 );
+
+
+export const WeatherActions = {
+  GetWeatherAction,
+  GetWeatherActionFail,
+  GetWeatherActionSuccess
+}

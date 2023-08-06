@@ -1,4 +1,4 @@
-export type Weather = WeatherCity | null;
+export type WeatherModel = WeatherCity | null;
 
 interface WeatherGeo {
   lat: number;

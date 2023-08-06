@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable, shareReplay } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
-import { SharedModule } from 'src/app/shared/shared.module';
-import { Weather } from '../../models';
-import { WeatherState, selectWeather } from '../../store';
+import { SharedModule } from '@weather/shared';
+import { WeatherModel, WeatherState, selectWeather } from '@weather/featured';
+
 
 @Component({
   selector: 'app-card-weather',
@@ -15,12 +15,12 @@ import { WeatherState, selectWeather } from '../../store';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardWeatherComponent {
-  weather_result$!: Observable<Weather>;
+  weather_result$!: Observable<WeatherModel>;
   constructor(private store: Store<WeatherState>) {}
 
   ngOnInit(): void {
     this.weather_result$ = this.store
-      .pipe(select(selectWeather))
-      .pipe(shareReplay(1));
+      .pipe(select(selectWeather),
+                    shareReplay(1))
   }
 }
