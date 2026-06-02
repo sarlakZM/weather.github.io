@@ -1,79 +1,142 @@
-# weather.github.io
+## Weather App
 
-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.x
-- Typescript 5.1
-- [Ngrx](https://ngrx.io/guide/store) && [Rxjs](https://rxjs.dev/guide/overview)
-- Styling with  [Angular Material](https://material.angular.io) based on SCSS
-- Testing with Jasmin + Karma + jasmine-marbles
+A weather application developed as a **Senior Angular Developer coding assignment** using **Angular**, **RxJS**, and **NgRx**.
+
+The project fetches real-time weather data from the **OpenWeather API**, allows users to search by city, displays current weather conditions, and includes performance optimizations such as caching, offline support, internationalization, and centralized error logging.
+
+---
 
 ## Built With
 
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
 [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![NgRx](https://img.shields.io/badge/NgRx-Store-BA2BD2?style=for-the-badge&logo=ngrx&logoColor=white)](https://ngrx.io/guide/store)
+[![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=for-the-badge&logo=reactivex&logoColor=white)](https://rxjs.dev/)
+[![Angular Material](https://img.shields.io/badge/Angular%20Material-UI-009688?style=for-the-badge&logo=angular&logoColor=white)](https://material.angular.io)
+[![PWA](https://img.shields.io/badge/PWA-Service_Worker-5A0FC8?style=for-the-badge)](https://angular.io/guide/service-worker-intro)
+[![ngx-translate](https://img.shields.io/badge/i18n-ngx--translate-ff9800?style=for-the-badge)](https://github.com/ngx-translate/core)
+[![Sentry](https://img.shields.io/badge/Sentry-Error_Logging-362D59?style=for-the-badge&logo=sentry&logoColor=white)](https://sentry.io/)
 [![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
-![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)
-![Jasmine](https://img.shields.io/badge/-Jasmine-%238A4182?style=for-the-badge&logo=Jasmine&logoColor=white)
+[![Jasmine](https://img.shields.io/badge/Jasmine-8A4182?style=for-the-badge&logo=jasmine&logoColor=white)](https://jasmine.github.io/)
+[![Karma](https://img.shields.io/badge/Karma-56C0C0?style=for-the-badge&logo=karma&logoColor=white)](https://karma-runner.github.io/)
+[![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://weather-task-angular.netlify.app/)
+
+---
 
 ## Features
 
-**All functionality*
+### **Assignment Requirements**
 
+| Function | Description | Implementation |
+| :------- | :---------- | :------------- |
+| `Weather API Integration` | Fetch weather data from a public weather API using RxJS Observables and operators. | Integrated with [OpenWeather API](https://api.openweathermap.org). API key is passed as query parameter, e.g. `/data/2.5/weather?q={city}&appid={API_KEY}&units=metric` |
+| `Caching and Offline Support` | Reduce API requests and support offline functionality by caching previously fetched data. | Implemented using **HTTP interceptor**, **RxJS shareReplay**, **Angular Service Worker**, and **PWA build configuration** |
+| `Display Weather Data` | Show current weather information including temperature, humidity, and weather condition. | Implemented in dedicated weather UI components |
+| `Search Functionality` | Search weather data by city name through an input field and search action. | Implemented using Angular forms and NgRx state flow |
+| `Error Handling and Logging` | Handle API errors gracefully and log exceptions using an external service. | Integrated **Sentry** for error monitoring and **ngx-toastr** for user notifications |
+| `State Management with NgRx` | Manage application state using actions, reducers, effects, and selectors. | Implemented using **@ngrx/store**, **@ngrx/effects**, and selectors |
+| `Unit Testing and Test Coverage` | Ensure code quality and reliability with tests. | Implemented using **Jasmine**, **Karma**, and **jasmine-marbles** |
+| `Performance Optimization` | Improve performance through caching, optimized requests, and maintainable architecture. | Implemented with request caching, memoized selectors, and modular structure |
+| `Internationalization and Localization` | Support multiple languages in the application. | Implemented with **ngx-translate** |
+| `Responsive Design` | Ensure usability across mobile, tablet, and desktop screens. | Built with responsive Angular Material UI and SCSS |
+| `Continuous Integration and Deployment` | Deploy the app to a public hosting platform. | Deployed on **Netlify** → [View Site](https://weather-task-angular.netlify.app/) |
 
-| Function                   | Description                           | Implemention                                                                      |
-| :------------------------- | :---------------------------------------------------------- | :------------------------------------------------------- |
-| `Weather API Integration `  | Integrate with a weather API of your choice to fetch weather data.(openweather,...) Use RxJS Observables and operators to handle asynchronous data fetching.  | -Login to [openweathermap ref](-https://api.openweathermap.org) site and get an API KEY for getting data you pass it as params with url e.g. /data/2.5/weather?q={city}&&appid={API key}&units=metric     |
-|  `Caching static files and data and Offline as well`     |   Implement caching mechanisms to reduce API requests and improve performance. Support offline functionality by caching previously fetched weather data.|   - Using Interceptor and capture request, ShareReplay rxjs , Servive Worker, pwa , and  configure Production Build with http-server [Help ref](https://medium.com/ngconf/angular-pwa-install-and-configure-858dd8e9fb07) |
-| `Display Weather Data`        | Display the current weather information, including temperature, humidity, and weather condition. |        |
-| `Search Functionality`       |  Implement an input field with a search button. Fetch and display the weather data for the searched city. |        |
-| `ErrorHandling and Logging`    | Handle errors that may occur during API requests. Display appropriate error messages to the user. Integrate a logging service (e.g., Sentry) to log errors and exceptions. | - Create account and login to [Sentry ref](https://test-app-7v.sentry.io) site  - # Using npm (Angular 12+) npm install --save @sentry/angular-ivy - setting the sentry dsn , init the sentry in project , and register the sentry sonfig in provider of the module     - [Using Toast notify](https://github.com/scttcper/ngx-toastr)   |
-| `StateManagement with NgRx`    | Use NgRx to manage the application state. Define actions, reducers, and effects to handle fetching weather data and updating the state accordingly. Use selectors to retrieve specific weather data from the state.| [NgRx ref](https://ngrx.io/guide/store)   |
-| `UnitTesting and TestCoverage` | Write unit tests using Angular's testing frameworks (e.g., Jasmine, Karma). Aim for a high level of test coverage to ensure code reliability and maintainability. | [testing-code-coverage ref](https://angular.io/guide/testing-code-coverage)        |
-| `Performance Optimization`              | Optimize the application's performance by lazy-loading modules, using code splitting, and optimizing network requests. Implement memoization techniques to cache expensive calculations and computations  |  |
-| `Internationalization and Localization`  | Implement internationalization (i18n) and localization (l10n) support to provide multi-language support in the application.    | [ngx-translate ref](https://github.com/ngx-translate/core)     |
-| `Responsive Design`      | Design and layout the application with a responsive and mobile-friendly interface. Ensure the application is visually appealing and usable on different screen sizes. |  |
-| `Continuous Integration and Deployment`  | Deploy the application to a hosting platform on Netlify | [View Site](https://weather-task-angular.netlify.app/) - [Ref](https://www.programonaut.com/host-your-web-application-for-free-with-netlify-step-by-step/) - [Netlify](https://app.netlify.com/start/)|
+---
 
+## API Reference
 
-## Development server
+| API Name | Method | Reference |
+| :------- | :----- | :-------- |
+| `OpenWeather Current Weather API` | `GET` | [Ref](https://api.openweathermap.org) |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### API Key
 
-## Code scaffolding
+To use the weather API:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Create an account at [OpenWeather](https://openweathermap.org/)
+- Generate an API key
+- Use the key in requests like: /data/2.5/weather?q={city}&appid={API_KEY}&units=metric
+---
 
-## Build
+## Run Locally
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+| Function | Description |
+| :------- | :---------- |
+| `npm install` | Install dependencies |
+| `ng serve` | Start development server at `http://localhost:4200/` |
+| `ng build` | Build the project |
+| `npm run test` | Run unit tests |
+| `npm run test-coverage` | Run test coverage report |
+| `npm run lint` | Analyze code with ESLint |
+| `npm run lint:fix` | Fix lint issues automatically |
+| `npm run prettier` | Format source files |
+| `npm run start-pwa` | Build and serve production output locally for offline/PWA testing |
 
-## Running unit tests and test-coverage
+---
 
-```bash
-  npm run test
-  npm run test test-coverage
+## Deployment
+
+The application is deployed on **Netlify**:
+
+[View Live Site](https://weather-task-angular.netlify.app/)
+
+---
+
+## Project Structure
+
 ```
+app
+├── core
+│   ├── components
+│   │   ├── navbar
+│   │   └── translate
+│   ├── config
+│   ├── constants
+│   ├── enum
+│   ├── interceptors
+│   ├── models
+│   ├── services
+│   ├── store
+│   └── utils
+├── featured
+│   └── weather
+│       ├── components
+│       │   └── card-weather
+│       ├── config
+│       ├── mock
+│       ├── models
+│       ├── pages
+│       │   └── weather.page
+│       ├── services
+│       └── store
+│           └── effects
+└── shared
+    ├── components
+    │   └── toast
+    └── services
 
+assets
+├── i18n
+├── icons
+└── images
 
-## Further help
-Analyze statically the code to quickly find problems.
-
-```bash
-  npm run lint
-  npm run lint:fix
+styles
 ```
+## Design Decisions
 
-Format the code with [Prettier](https://prettier.io/)
+- **Angular 16** was selected for a robust SPA architecture with strong ecosystem support
+- **NgRx** was used for predictable state management and scalable data flow
+- **RxJS** was used for asynchronous API handling and stream-based logic
+- **Angular Material** provided a clean and responsive UI foundation
+- **PWA + Service Worker** were used to support caching and offline access
+- **Sentry** was integrated to improve production-level error observability
+- **ngx-translate** was used to support internationalization requirements
 
-```bash
-  npm run prettier
-```
+---
+* Assignment for [Inpress](https://github.com/sarlakZM)](https://www.inpress.be/)
+---
 
-configure Production Build with http-server and run /dist/ on a server throght cli ( Testing offline mode)
+## Demo
 
-```bash
-  npm run start-pwa
-```
-
-## View(Demo) of project
 ![img](src/assets/images/weather-site-view.png)
 ![img](src/assets/images/sentry-notify.png)
