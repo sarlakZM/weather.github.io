@@ -39,7 +39,7 @@ The project fetches real-time weather data from the **OpenWeather API**, allows 
 | `Performance Optimization` | Improve performance through caching, optimized requests, and maintainable architecture. | Implemented with request caching, memoized selectors, and modular structure |
 | `Internationalization and Localization` | Support multiple languages in the application. | Implemented with **ngx-translate** |
 | `Responsive Design` | Ensure usability across mobile, tablet, and desktop screens. | Built with responsive Angular Material UI and SCSS |
-| `Continuous Integration and Deployment` | Deploy the app to a public hosting platform. | Deployed on **Netlify** → [View Site](https://weather-task-angular.netlify.app/) |
+| `Continuous Integration and Deployment` | Deploy the app to a public hosting platform. | Deployed on **Netlify** → [View Site](https://weather-task-angular.netlify.app/) - [Ref](https://www.programonaut.com/host-your-web-application-for-free-with-netlify-step-by-step/) - [Netlify](https://app.netlify.com/start/) |
 
 ---
 
@@ -133,11 +133,10 @@ styles
 - **ngx-translate** was used to support internationalization requirements
 
 ---
-* Assignment for [Inpress](https://github.com/sarlakZM)](https://www.inpress.be/)
+* Assignment for [Inpress](https://www.inpress.be/)
 ---
 
 ## Demo
 ![img](src/assets/images/weather-site-view.png)
 ![img](src/assets/images/sentry-notify.png)
-![img](src/assets/images/weather-site-view.png)
-![img](src/assets/images/sentry-notify.png)
+
