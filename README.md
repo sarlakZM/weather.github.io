@@ -137,6 +137,7 @@ styles
 ---
 
 ## Demo
-
+![img](src/assets/images/weather-site-view.png)
+![img](src/assets/images/sentry-notify.png)
 ![img](src/assets/images/weather-site-view.png)
 ![img](src/assets/images/sentry-notify.png)
